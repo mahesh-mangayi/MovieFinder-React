@@ -1,15 +1,9 @@
-/* Moving Footer.css to styles folder */
 .footer {
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
+  background-color: rgba(5, 5, 5, 0.7);
+  backdrop-filter: blur(5px);
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   margin-top: auto;
   color: #ccc;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer p {
-  margin: 0;
   font-size: 0.9rem;
 }

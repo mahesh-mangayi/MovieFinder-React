@@ -1,13 +1,13 @@
 import { OMDB_CONFIG } from "../config.js"
 
 const resolveOmdbApiKey = () => {
-  // Prefer key from config (which reads env with fallback), then direct env
+  
   const keyFromConfig = OMDB_CONFIG?.API_KEY
   const keyFromEnv = import.meta.env?.VITE_OMDB_API_KEY
   const resolved = keyFromConfig && keyFromConfig !== "your_api_key_here" ? keyFromConfig : keyFromEnv
   if (!resolved || resolved === "your_api_key_here") {
     throw new Error(
-      "OMDb API key is missing. Set VITE_OMDB_API_KEY in .env (and restart dev server)."
+      "OMDb API key is missing"
     )
   }
   return resolved
@@ -18,7 +18,7 @@ export const searchMovies = async (query) => {
     const apiKey = resolveOmdbApiKey()
     const url = `${OMDB_CONFIG.BASE_URL}?apikey=${apiKey}&s=${encodeURIComponent(query)}&type=movie`
 
-    console.log("url", url);
+    // console.log("url", url);
     const response = await fetch(url)
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`)

@@ -1,4 +1,3 @@
-"use client"
 
 import { useState } from "react"
 import Navbar from "../components/Navbar"
@@ -6,7 +5,7 @@ import Footer from "../components/Footer"
 import SearchBar from "../components/SearchBar"
 import MovieCard from "../components/MovieCard"
 import { searchMovies } from "../utils/api"
-import "./HomePage.css"
+import "../styles/HomePage.css"
 
 const HomePage = () => {
   const [movies, setMovies] = useState([])

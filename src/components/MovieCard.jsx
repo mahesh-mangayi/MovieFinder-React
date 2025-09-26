@@ -48,7 +48,6 @@ const MovieCard = ({ movie }) => {
       <div className="movie-info">
         <h3 className="movie-title">{movie.Title}</h3>
         <p className="movie-year">{movie.Year}</p>
-        {movie.Plot && movie.Plot !== "N/A" && <p className="movie-plot">{movie.Plot}</p>}
         <button className="imdb-link" onClick={handleImdbClick}>
           View on IMDb
         </button>
