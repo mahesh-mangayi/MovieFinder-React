@@ -1,20 +1,15 @@
-
 import { createContext, useContext, useState, useEffect } from "react"
 
 const FavoritesContext = createContext()
 
 export const useFavorites = () => {
-  const context = useContext(FavoritesContext)
-  if (!context) {
-    throw new Error("useFavorites must be used within a FavoritesProvider")
-  }
-  return context
+  return useContext(FavoritesContext);
 }
 
 export const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([])
 
-  // Load favorites from localStorage on mount
+  
   useEffect(() => {
     const savedFavorites = localStorage.getItem("moviefinder-favorites")
     if (savedFavorites) {
@@ -22,7 +17,6 @@ export const FavoritesProvider = ({ children }) => {
     }
   }, [])
 
-  // Save favorites to localStorage whenever favorites change
   useEffect(() => {
     localStorage.setItem("moviefinder-favorites", JSON.stringify(favorites))
   }, [favorites])

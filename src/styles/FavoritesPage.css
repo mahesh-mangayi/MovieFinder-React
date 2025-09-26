@@ -48,17 +48,6 @@
   margin: 0 auto;
 }
 
-.empty-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 2rem;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.empty-icon svg {
-  width: 100%;
-  height: 100%;
-}
 
 .empty-state h2 {
   font-size: 2rem;
@@ -93,7 +82,6 @@
   box-shadow: 0 6px 20px rgba(229, 9, 20, 0.4);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .favorites-container {
     padding: 1rem;
@@ -129,11 +117,6 @@
   .movies-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .empty-icon {
-    width: 60px;
-    height: 60px;
   }
 
   .browse-movies-btn {

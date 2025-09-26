@@ -1,4 +1,3 @@
-"use client"
 import { useFavorites } from "../context/FavoritesContext"
 import "../styles/MovieCard.css"
 
@@ -31,7 +30,6 @@ const MovieCard = ({ movie }) => {
         <button
           className="favorite-button"
           onClick={handleFavoriteClick}
-          aria-label={isMovieFavorite ? "Remove from favorites" : "Add to favorites"}
         >
           <svg
             className={`heart-icon ${isMovieFavorite ? "favorited" : ""}`}

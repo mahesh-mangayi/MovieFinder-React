@@ -30,7 +30,7 @@ const FavoritesPage = () => {
             <div className="empty-state">
               <h2>You have no favorites yet</h2>
               <p>Start exploring movies and add them to your favorites by clicking the heart icon!</p>
-              <a href="/" className="browse-movies-btn">
+              <a href="/home" className="browse-movies-btn">
                 Browse Movies
               </a>
             </div>
