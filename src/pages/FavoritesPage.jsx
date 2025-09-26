@@ -4,6 +4,8 @@ import MovieCard from "../components/MovieCard"
 import { useFavorites } from "../context/FavoritesContext"
 import "../styles/FavoritesPage.css"
 
+import { Link } from "react-router-dom"
+
 const FavoritesPage = () => {
   const { favorites } = useFavorites()
 
@@ -30,9 +32,9 @@ const FavoritesPage = () => {
             <div className="empty-state">
               <h2>You have no favorites yet</h2>
               <p>Start exploring movies and add them to your favorites by clicking the heart icon!</p>
-              <a href="/home" className="browse-movies-btn">
+              <Link to="/home" className="browse-movies-btn">
                 Browse Movies
-              </a>
+              </Link>
             </div>
           )}
         </div>
